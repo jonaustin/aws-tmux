@@ -40,13 +40,12 @@ should have aws-tmux available. :rocket:
 Clone this repository in your `$HOME/.tmux/` directory:
 
 ```bash
-git clone https://github.com/darko-mesaros/aws-tmux.git
-$HOME/.tmux/plugins/aws-tmux
+git clone https://github.com/darko-mesaros/aws-tmux.git $HOME/.tmux/plugins/aws-tmux
 ```
 Add the following line to the bottom of your `.tmux.conf` file:
 
 ```bash
-run $HOME/.tmux/aws-tmux/aws.tmux
+run $HOME/.tmux/plugins/aws-tmux/aws.tmux
 ```
 
 ## Configuration 
