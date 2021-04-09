@@ -14,6 +14,7 @@ following:
 
 - [AWS CLI](https://aws.amazon.com/cli/) (configured)
 - [fzf](https://github.com/junegunn/fzf)
+- [jq](https://stedolan.github.io/jq/)
 
 To use this plugin, clone the repo into the `$HOME/.tmux` directory. This does
 nothing on its own, so you need to add some things to your tmux configuration.
