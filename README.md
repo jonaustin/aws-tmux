@@ -23,11 +23,33 @@ There are three options currently available to be displayed in tmux:
 - AWS CLI version `#{aws_version}`
 - CloudFormation stack status `#{aws_cfn_status}`
 
-Make sure to execute this plugin in tmux like so (TPM Support coming soon):
+## Installation
+
+### Tmux Plugin Manager (TPM) - Recommended
+If you are using [TPM](https://github.com/tmux-plugins/tpm) just add the
+following line to the plugin section of your `.tmux.conf` file:
+
+```bash
+set -g @plugin 'darko-mesaros/aws-tmux'
+```
+
+Reload your tmux configuration and update your TPM plugins (Prefix + U), and you
+should have aws-tmux available. :rocket:
+
+### Manual
+Clone this repository in your `$HOME/.tmux/` directory:
+
+```bash
+git clone https://github.com/darko-mesaros/aws-tmux.git
+$HOME/.tmux/plugins/aws-tmux
+```
+Add the following line to the bottom of your `.tmux.conf` file:
 
 ```bash
 run $HOME/.tmux/aws-tmux/aws.tmux
 ```
+
+## Configuration 
 
 You can add those things to your status bar configuration like so:
 ```bash
@@ -53,8 +75,3 @@ If you wish to change this, add this to your `.tmux.conf`:
 ```bash
 set -gq @aws-cfn-list 'YOURKEY'
 ```
-
----
-Provided as is, use at your own risk! I will turn this into a proper [TPM
-plugin](https://github.com/tmux-plugins/tpm/blob/master/docs/how_to_create_plugin.md)
-somewhere down the line.
