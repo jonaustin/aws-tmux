@@ -6,7 +6,7 @@ source "$CURRENT_DIR/helpers.sh"
 
 get_account()
 {
-  AWS_ACCOUNT="$(${AWS_TMUX_BINARY} aws sts get-caller-identity | jq -cr '.Account' 2>/dev/null)"
+  AWS_ACCOUNT="$(${AWS_TMUX_BINARY} sts get-caller-identity | jq -cr '.Account' 2>/dev/null)"
   if [[ $AWS_ACCOUNT == "" ]]; then
     printf "not set"
   else 

@@ -7,12 +7,14 @@ export TMUX_CFN="foobar"
 
 aws_interpolations=(
 	"\#{aws_region}"
+	"\#{aws_account}"
 	"\#{aws_version}"
 	"\#{aws_cfn_status}"
 )
 
 aws_commands=(
   "#($CURRENT_DIR/scripts/region.sh)"
+  "#($CURRENT_DIR/scripts/account.sh)"
   "#($CURRENT_DIR/scripts/version.sh)"
   "#($CURRENT_DIR/scripts/cfn_status.sh)"
 )
